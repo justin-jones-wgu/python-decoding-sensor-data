@@ -30,7 +30,7 @@ print("House sensor records for date {} = {}".format(test_date.strftime("%m/%d/%
 
 # Module 3 code here:
 
-temperature_data = TemperatureData(data=data)
+temperature_data = TemperatureData(data)
 recs = temperature_data.get_data_by_area(rec_area=test_area)
 
 print("\nHouse Temperature sensor records for area {} = {}".format(test_area, len(recs)))
