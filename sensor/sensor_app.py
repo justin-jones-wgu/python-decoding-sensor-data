@@ -1,7 +1,8 @@
 # Runner script for all modules
 from load_data import load_sensor_data
 from house_info import HouseInfo
-from datetime import date, datetime
+from datetime import datetime, date
+##############################
 
 ##############################
 # Do not remove these two lines
@@ -21,8 +22,8 @@ recs = house_info.get_data_by_area("id", rec_area=test_area)
 print("\nHouse sensor records for area {} = {}".format(test_area, len(recs)))
 
 test_date = datetime.strptime("5/9/20", "%m/%d/%y")
-recs = house_info.get_data_by_date("id", rec_data=test_date)
-print("House sensor records for date: {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
+recs = house_info.get_data_by_date("id", rec_date=test_date)
+print("House sensor records for date {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 
 
 
