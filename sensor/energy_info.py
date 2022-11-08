@@ -8,12 +8,9 @@ class EnergyData(HouseInfo):
     ENERGY_BITS = 0x0f0
 
     def _get_energy(self, rec):
-        energy = int(rec,base=16)
-        # clear the first and third bits
-        energy = self.ENERGY_BITS & energy
-        # shift to the right 4 bits
-        energy = energy >> 4
-
+        energy = int(rec, base=16)
+        energy = energy & self.ENERGY_BITS            # mask ENERGY bits
+        energy = energy >> 4                          # shift right
         return energy
 
     def _convert_data(self, data):
